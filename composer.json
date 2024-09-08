@@ -1,0 +1,21 @@
+{
+    "name": "mr_nan/framwork",
+    "description": "learning",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require": {
+        "mr_nan/main" : "dev-main",
+        "respect/validation": "^2.3",
+        "rakit/validation": "*"
+    },
+    "repositories": [{
+        "type": "path",
+        "url": "main/"
+    }
+    ]
+}

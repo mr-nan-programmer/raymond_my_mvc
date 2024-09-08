@@ -1,0 +1,13 @@
+{
+    "name": "mr_nan/main",
+    "type": "lib",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "MrNan\\Main\\": "src/"
+        }
+    },
+    "require": {
+        "respect/validation": "*"
+    }
+}
