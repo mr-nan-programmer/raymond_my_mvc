@@ -11,7 +11,7 @@
     "require": {
         "mr_nan/main" : "dev-main",
         "respect/validation": "^2.3",
-        "rakit/validation": "*"
+        "rakit/validation": "^1.4"
     },
     "repositories": [{
         "type": "path",

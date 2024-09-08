@@ -1,7 +1,7 @@
 <?php namespace MrNan\Main;
 use MongoDB\Driver\Exception\Exception;
 use ReflectionMethod;
-    
+
 class Router{
     public $requsts;
     protected $router_files =[];
@@ -10,9 +10,7 @@ class Router{
         "post"=>[]
 ]
 ;
-    static public $straccher =[
-        "header"=>[],"footer"=> []
-        ];
+
 
     public function __construct()
 
@@ -93,7 +91,7 @@ class Router{
         $params_dynamic=array_values($rotecallback[1]);
 
         }
-        $autoinjection=[];
+       $autoinjection=[];
         if (is_array($callback)){
             $controller_methode=new ReflectionMethod($callback[0], $callback[1]);
             foreach ($controller_methode->getParameters() as $param) {
@@ -105,10 +103,10 @@ class Router{
                 }
             }
 
-            return  $controller_methode->invoke(new $callback[0],...$autoinjection, ...$params_dynamic);
+            return  $controller_methode->invoke(new $callback[0], ...array_values($autoinjection), ...$params_dynamic);
         }
 
-//        return call_user_func($callback,...$params_dynamic);
+//        return call_user_func($callback,...$autoinjection,...$params_dynamic);
 
 
 
@@ -116,3 +114,6 @@ class Router{
 
     }
 }
+?>
+
+

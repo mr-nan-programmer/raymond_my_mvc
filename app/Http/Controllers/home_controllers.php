@@ -1,7 +1,48 @@
 <?php namespace App\Http\Controllers;
+use MrNan\Main\Requsts;
+use Rakit\Validation\Validation;
+use Rakit\Validation\Validator;
+
 class home_controllers{
 
-    public function index($id) :string
+    public function  backend(Requsts $requsts, Validator $validator)
+    {
+
+
+
+
+
+
+// make it
+        var_dump($requsts->all_request_spc());
+$validation = $validator->make($requsts->all_request_spc()['post'], [
+    'email'                  => 'required|email|max:30',
+//    'email'                 => 'required|email',
+//    'password'              => 'required|min:6',
+//    'confirm_password'      => 'required|same:password',
+//    'avatar'                => 'required|uploaded_file:0,500K,png,jpeg',
+//    'skills'                => 'array',
+//    'skills.*.id'           => 'required|numeric',
+//    'skills.*.percentage'   => 'required|numeric'
+]);
+
+// then validate
+$validation->validate();
+
+if ($validation->fails()) {
+    // handling errors
+    $errors = $validation->errors();
+    echo "<pre>";
+    print_r($errors->firstOfAll());
+    echo "</pre>";
+    exit;
+} else {
+    // validation passes
+    echo "Success!";
+}
+
+    }
+    public function index() :string
     {
 
 
@@ -402,7 +443,7 @@ class home_controllers{
 
                     <label class="sr-only" for="subscribeEmail">Email address</label>
                     <div class="input-group mb-2">
-                        <input type="text" class="form-control bg-dark border-light input-email" id="subscribeEmail" placeholder="Email address">
+                        <input type="text" class="form-control bg-dark border-light input-email" name="email" id="subscribeEmail" placeholder="Email address">
                         <button class="input-group-text btn-success text-light" type="submit">Subscribe</button>
                     </div>
                 </form>

@@ -5,11 +5,7 @@ class Requsts{
     const  POST_REQUEST = 1;
     const  GET_REQUEST = 2;
 
-    public function __construct()
 
-    {
-        echo "<!--Requsts in run-->";
-    }
     public function this_url()
     {
         $url=$_SERVER['REQUEST_URI'];
