@@ -1,7 +1,5 @@
-
 <!DOCTYPE html>
-
-<html lang="en">
+<html lang="zh">
 
 <head>
     <title></title>
@@ -18,11 +16,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/custom.css">
-
-
-
 </head>
-<!-- hrade END -->
+
 <body>
 <!-- Start Top Nav -->
 <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
@@ -43,10 +38,7 @@
         </div>
     </div>
 </nav>
-<!-- Close Top Nav -->
 
-
-<!-- Header -->
 <nav class="navbar navbar-expand-lg navbar-light shadow">
     <div class="container d-flex justify-content-between align-items-center">
 
@@ -62,24 +54,23 @@
             <div class="flex-fill">
                 <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
+                        <a class="nav-link" href="/">主页</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="about">关于</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">products</a>
+                        <a class="nav-link" href="contact">产品</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="shop.html">blog</a>
+                        <a class="nav-link" href="products">博客</a>
                     </li>
-
                 </ul>
             </div>
             <div class="navbar align-self-center d-flex">
                 <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
                     <div class="input-group">
-                        <input type="text" class="form-control search-input" id="inputMobileSearch" placeholder="Search ...">
+                        <input type="text" class="form-control search-input" id="inputMobileSearch" placeholder="搜索 ...">
                         <div class="input-group-text">
                             <i class="fa fa-fw fa-search"></i>
                         </div>
@@ -88,39 +79,28 @@
                 <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
                     <i class="fa fa-fw fa-search text-dark mr-2"></i>
                 </a>
-                <!-- BUY IS NOT ACTIVE -->
-                <!--
-                                    <a class="nav-icon position-relative text-decoration-none" href="#">
-                                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
-                                    </a> -->
+
                 <span class=" lang-nav nav-icon position-relative text-decoration-none ">
                         <i class="fa fa-regular fa-globe text-dark mr-3 "></i>
                         <div class="lang-menu">
-
                             <ul >
                                 <li>
-                                    <a href="EN" >English</a>
+                                    <a href="en" >English</a>
                                 </li>
                                 <li>
-                                    <a href="CN" >china</a>
+                                    <a href="/" >Chinese </a>
                                 </li>
                             </ul>
-
                         </div>
-                    <!-- <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span> -->
                     </span>
             </div>
         </div>
 
     </div>
 </nav>
-<!-- Close Header -->
 
+@yield('content')
 
-
-
-<!-- Start Footer -->
 <footer class="bg-dark" id="tempaltemo_footer">
     <div class="container">
         <div class="row">
@@ -130,7 +110,7 @@
                 <ul class="list-unstyled text-light footer-link-list">
                     <li>
                         <i class="fas fa-map-marker-alt fa-fw"></i>
-                        china , yiwu city , ...
+                        中国，义乌市，...
                     </li>
                     <li>
                         <i class="fa fa-phone fa-fw"></i>
@@ -144,26 +124,26 @@
             </div>
 
             <div class="col-md-4 pt-5">
-                <h2 class="h2 text-light border-bottom pb-3 border-light">Products</h2>
+                <h2 class="h2 text-light border-bottom pb-3 border-light">产品</h2>
                 <ul class="list-unstyled text-light footer-link-list">
-                    <li><a class="text-decoration-none" href="#">Luxury</a></li>
-                    <li><a class="text-decoration-none" href="#">Sport Wear</a></li>
-                    <li><a class="text-decoration-none" href="#">Men's Shoes</a></li>
-                    <li><a class="text-decoration-none" href="#">Women's Shoes</a></li>
-                    <li><a class="text-decoration-none" href="#">Popular Dress</a></li>
-                    <li><a class="text-decoration-none" href="#">Gym Accessories</a></li>
-                    <li><a class="text-decoration-none" href="#">Sport Shoes</a></li>
+                    <li><a class="text-decoration-none" href="#">奢华</a></li>
+                    <li><a class="text-decoration-none" href="#">运动装</a></li>
+                    <li><a class="text-decoration-none" href="#">男鞋</a></li>
+                    <li><a class="text-decoration-none" href="#">女鞋</a></li>
+                    <li><a class="text-decoration-none" href="#">流行连衣裙</a></li>
+                    <li><a class="text-decoration-none" href="#">健身配件</a></li>
+                    <li><a class="text-decoration-none" href="#">运动鞋</a></li>
                 </ul>
             </div>
 
             <div class="col-md-4 pt-5">
-                <h2 class="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
+                <h2 class="h2 text-light border-bottom pb-3 border-light">更多信息</h2>
                 <ul class="list-unstyled text-light footer-link-list">
-                    <li><a class="text-decoration-none" href="#">Home</a></li>
-                    <li><a class="text-decoration-none" href="#">About Us</a></li>
-                    <li><a class="text-decoration-none" href="#">Shop Locations</a></li>
-                    <li><a class="text-decoration-none" href="#">FAQs</a></li>
-                    <li><a class="text-decoration-none" href="#">Contact</a></li>
+                    <li><a class="text-decoration-none" href="#">主页</a></li>
+                    <li><a class="text-decoration-none" href="#">关于我们</a></li>
+                    <li><a class="text-decoration-none" href="#">店铺位置</a></li>
+                    <li><a class="text-decoration-none" href="#">常见问题</a></li>
+                    <li><a class="text-decoration-none" href="#">联系</a></li>
                 </ul>
             </div>
 
@@ -191,14 +171,12 @@
             </div>
             <div class="col-auto">
                 <form method="post" action="">
-
-                    <label class="sr-only" for="subscribeEmail">Email address</label>
+                    <label class="sr-only" for="subscribeEmail">邮箱地址</label>
                     <div class="input-group mb-2">
-                        <input type="text" class="form-control bg-dark border-light input-email" name="email" id="subscribeEmail" placeholder="Email address">
-                        <button class="input-group-text btn-success text-light" type="submit">Subscribe</button>
+                        <input type="text" class="form-control bg-dark border-light input-email" name="email" id="subscribeEmail" placeholder="邮箱地址">
+                        <button class="input-group-text btn-success text-light" type="submit">订阅</button>
                     </div>
                 </form>
-
             </div>
         </div>
     </div>
@@ -208,8 +186,8 @@
             <div class="row pt-2">
                 <div class="col-12">
                     <p class="text-left text-light">
-                        Copyright &copy; <span id="now-year"></span> Raymond
-                        | Creator : <a rel="sponsored" href="https://templatemo.com" target="_blank">RedFarm</a>
+                        版权所有 &copy; <span id="now-year"></span> Raymond
+                        | 创建者 : <a rel="sponsored" href="https://templatemo.com" target="_blank">RedFarm</a>
                     </p>
                 </div>
             </div>
@@ -217,16 +195,12 @@
     </div>
 
 </footer>
-<!-- End Footer -->
 
-<!-- Start Script -->
 <script src="assets/js/jquery-1.11.0.min.js"></script>
 <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/templatemo.js"></script>
 <script src="assets/js/custom.js"></script>
-<!-- End Script -->
 </body>
 
 </html>
-

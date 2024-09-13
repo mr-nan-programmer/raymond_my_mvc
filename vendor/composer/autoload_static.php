@@ -4,9 +4,11 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit4723b0afc80fb125f20e830df23570f2
+class ComposerStaticInit0ff981a13e135e0888385a8453efc3c5
 {
     public static $files = array (
+        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
+        '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
         '2df68f9e79c919e2d88506611769ed2e' => __DIR__ . '/..' . '/respect/stringifier/src/stringify.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
     );
@@ -15,16 +17,37 @@ class ComposerStaticInit4723b0afc80fb125f20e830df23570f2
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Component\\Finder\\' => 25,
+            'Symfony\\Component\\Debug\\' => 24,
         ),
         'R' => 
         array (
             'Respect\\Validation\\' => 19,
             'Respect\\Stringifier\\' => 20,
             'Rakit\\Validation\\' => 17,
+            'Rakit\\Blade\\' => 12,
+        ),
+        'P' => 
+        array (
+            'Psr\\Log\\' => 8,
         ),
         'M' => 
         array (
             'MrNan\\Main\\' => 11,
+        ),
+        'I' => 
+        array (
+            'Illuminate\\View\\' => 16,
+            'Illuminate\\Support\\' => 19,
+            'Illuminate\\Filesystem\\' => 22,
+            'Illuminate\\Events\\' => 18,
+            'Illuminate\\Contracts\\' => 21,
+            'Illuminate\\Container\\' => 21,
+        ),
+        'D' => 
+        array (
+            'Doctrine\\Inflector\\' => 19,
+            'Doctrine\\Common\\Inflector\\' => 26,
         ),
         'A' => 
         array (
@@ -36,6 +59,14 @@ class ComposerStaticInit4723b0afc80fb125f20e830df23570f2
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Component\\Finder\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/finder',
+        ),
+        'Symfony\\Component\\Debug\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/debug',
         ),
         'Respect\\Validation\\' => 
         array (
@@ -49,9 +80,49 @@ class ComposerStaticInit4723b0afc80fb125f20e830df23570f2
         array (
             0 => __DIR__ . '/..' . '/rakit/validation/src',
         ),
+        'Rakit\\Blade\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rakit/blade/src',
+        ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
         'MrNan\\Main\\' => 
         array (
             0 => __DIR__ . '/..' . '/mr_nan/main/src',
+        ),
+        'Illuminate\\View\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/view',
+        ),
+        'Illuminate\\Support\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/support',
+        ),
+        'Illuminate\\Filesystem\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/filesystem',
+        ),
+        'Illuminate\\Events\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/events',
+        ),
+        'Illuminate\\Contracts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/contracts',
+        ),
+        'Illuminate\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/container',
+        ),
+        'Doctrine\\Inflector\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Inflector',
+        ),
+        'Doctrine\\Common\\Inflector\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
         ),
         'App\\' => 
         array (
@@ -66,9 +137,9 @@ class ComposerStaticInit4723b0afc80fb125f20e830df23570f2
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit4723b0afc80fb125f20e830df23570f2::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit4723b0afc80fb125f20e830df23570f2::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit4723b0afc80fb125f20e830df23570f2::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit0ff981a13e135e0888385a8453efc3c5::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit0ff981a13e135e0888385a8453efc3c5::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit0ff981a13e135e0888385a8453efc3c5::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -23,20 +23,20 @@ class DateComparator extends Comparator
      *
      * @throws \InvalidArgumentException If the test is not understood
      */
-    public function __construct(string $test)
+    public function __construct($test)
     {
         if (!preg_match('#^\s*(==|!=|[<>]=?|after|since|before|until)?\s*(.+?)\s*$#i', $test, $matches)) {
             throw new \InvalidArgumentException(sprintf('Don\'t understand "%s" as a date test.', $test));
         }
 
         try {
-            $date = new \DateTimeImmutable($matches[2]);
+            $date = new \DateTime($matches[2]);
             $target = $date->format('U');
-        } catch (\Exception) {
+        } catch (\Exception $e) {
             throw new \InvalidArgumentException(sprintf('"%s" is not a valid date.', $matches[2]));
         }
 
-        $operator = $matches[1] ?? '==';
+        $operator = isset($matches[1]) ? $matches[1] : '==';
         if ('since' === $operator || 'after' === $operator) {
             $operator = '>';
         }
@@ -45,6 +45,7 @@ class DateComparator extends Comparator
             $operator = '<';
         }
 
-        parent::__construct($target, $operator);
+        $this->setOperator($operator);
+        $this->setTarget($target);
     }
 }

@@ -1,6 +1,6 @@
 <?php $__env->startSection('content'); ?>
 
-    <!-- 模态框 -->
+    <!-- Modal -->
     <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="w-100 pt-1 mb-5 text-right">
@@ -8,7 +8,7 @@
             </div>
             <form action="" method="get" class="modal-content modal-body border-0 p-0">
                 <div class="input-group mb-2">
-                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="搜索 ...">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
                     <button type="submit" class="input-group-text bg-success text-light">
                         <i class="fa fa-fw fa-search text-white"></i>
                     </button>
@@ -17,7 +17,9 @@
         </div>
     </div>
 
-    <!-- 开始横幅英雄 -->
+
+
+    <!-- Start Banner Hero -->
     <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
         <ol class="carousel-indicators">
             <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="0" class="active"></li>
@@ -33,10 +35,10 @@
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left align-self-center">
-                                <h1 class="h1 text-success"><b>Raymond </b>激光</h1>
-                                <h3 class="h2">Raymond 除了激光切割机</h3>
+                                <h1 class="h1 text-success"><b>Raymond </b>Laser</h1>
+                                <h3 class="h2">Raymond in addition to laser cutting machines</h3>
                                 <p>
-                                    Raymond 已进入激光领域！通过请求<strong>免费</strong>咨询，以最低成本建立自己的工厂。
+                                    Raymond has entered the laser field! Build your own factory at the lowest cost by requesting a<strong> free  </strong> consultation in this regard
                                 </p>
                             </div>
                         </div>
@@ -51,10 +53,10 @@
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left">
-                                <h1 class="h1">多种产品</h1>
-                                <h3 class="h2">销售各种切割和雕刻机</h3>
+                                <h1 class="h1">Variety of products</h1>
+                                <h3 class="h2">Selling all kinds of cutting and engraving machines</h3>
                                 <p>
-                                    各种具有不同和惊人功能的设备可以在 Raymond 的网站上免费咨询并在线购买！
+                                    All kinds of devices with different and amazing features can be consulted for free on Raymond's website and buy online!
                                 </p>
                             </div>
                         </div>
@@ -69,10 +71,10 @@
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left">
-                                <h1 class="h1">各种零件</h1>
-                                <h3 class="h2">不用担心设备零件</h3>
+                                <h1 class="h1">All kinds of parts</h1>
+                                <h3 class="h2">Do not worry about the device parts </h3>
                                 <p>
-                                    在 Raymond 的网站上，您可以在线购买所有消耗品或激光切割机的备件，如果需要安装人员进行安装，只需打电话，安装人员将在一定时间内到达您的位置进行安装和维修。
+                                    On Raymond's website, you can buy all the consumables or spare parts of your laser cutting machine online, and if you need an installer to install it, just call and the installer will be sent to your place in a certain time to install and repair your machine.
                                 </p>
                             </div>
                         </div>
@@ -87,36 +89,39 @@
             <i class="fas fa-chevron-right"></i>
         </a>
     </div>
-    <!-- 结束横幅英雄 -->
+    <!-- End Banner Hero -->
 
-    <!-- 开始本月类别 -->
+
+    <!-- Start Categories of The Month -->
     <section class="container py-5">
         <div class="row text-center pt-3">
             <div class="col-lg-6 m-auto">
-                <h1 class="h1">产品类别</h1>
+                <h1 class="h1">Product categories</h1>
                 <p>
-                    Raymond 所有产品的一般分类。
+                    General classification of all Raymond products .
                 </p>
             </div>
         </div>
         <div class="row list-type">
+
             <div class="col-12 col-md-4 p-5 mt-3">
                 <a href="#"><img src="./assets/img/laser.png" class="rounded-circle img-fluid border img-type"></a>
-                <h2 class="h5 text-center mt-3 mb-3">激光机</h2>
-                <p class="text-center"><a class="btn btn-success">去购物</a></p>
+                <h2 class="h5 text-center mt-3 mb-3">Laser machine</h2>
+                <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
             </div>
         </div>
     </section>
-    <!-- 结束本月类别 -->
+    <!-- End Categories of The Month -->
 
-    <!-- 开始特色产品 -->
+
+    <!-- Start Featured Product -->
     <section class="bg-light">
         <div class="container py-5">
             <div class="row text-center py-3">
                 <div class="col-lg-6 m-auto">
-                    <h1 class="h1">最新产品</h1>
+                    <h1 class="h1">The latest products</h1>
                     <p>
-                        在此部分了解 Raymond 的最新产品。
+                        Find out about the latest Raymond products in this section.
                     </p>
                 </div>
             </div>
@@ -137,11 +142,11 @@
                                 </li>
                                 <li class="text-muted text-right">$240.00</li>
                             </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">健身重量</a>
+                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gym Weight</a>
                             <p class="card-text">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.
                             </p>
-                            <p class="text-muted">评论 (24)</p>
+                            <p class="text-muted">Reviews (24)</p>
                         </div>
                     </div>
                 </div>
@@ -161,11 +166,11 @@
                                 </li>
                                 <li class="text-muted text-right">$480.00</li>
                             </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">云耐克鞋</a>
+                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Cloud Nike Shoes</a>
                             <p class="card-text">
                                 Aenean gravida dignissim finibus. Nullam ipsum diam, posuere vitae pharetra sed, commodo ullamcorper.
                             </p>
-                            <p class="text-muted">评论 (48)</p>
+                            <p class="text-muted">Reviews (48)</p>
                         </div>
                     </div>
                 </div>
@@ -185,19 +190,18 @@
                                 </li>
                                 <li class="text-muted text-right">$360.00</li>
                             </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">夏季阿迪达斯鞋</a>
+                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Summer Addides Shoes</a>
                             <p class="card-text">
                                 Curabitur ac mi sit amet diam luctus porta. Phasellus pulvinar sagittis diam, et scelerisque ipsum lobortis nec.
                             </p>
-                            <p class="text-muted">评论 (74)</p>
+                            <p class="text-muted">Reviews (74)</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- 结束特色产品 -->
+    <!-- End Featured Product -->
 
 <?php $__env->stopSection(); ?>
-
-<?php echo $__env->make('layout.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('layout.en_master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

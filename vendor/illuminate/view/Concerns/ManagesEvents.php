@@ -3,15 +3,15 @@
 namespace Illuminate\View\Concerns;
 
 use Closure;
-use Illuminate\Contracts\View\View as ViewContract;
 use Illuminate\Support\Str;
+use Illuminate\Contracts\View\View as ViewContract;
 
 trait ManagesEvents
 {
     /**
      * Register a view creator event.
      *
-     * @param  array|string  $views
+     * @param  array|string     $views
      * @param  \Closure|string  $callback
      * @return array
      */
@@ -55,7 +55,7 @@ trait ManagesEvents
         $composers = [];
 
         foreach ((array) $views as $view) {
-            $composers[] = $this->addViewEvent($view, $callback);
+            $composers[] = $this->addViewEvent($view, $callback, 'composing: ');
         }
 
         return $composers;
@@ -85,9 +85,9 @@ trait ManagesEvents
     /**
      * Register a class based view composer.
      *
-     * @param  string  $view
-     * @param  string  $class
-     * @param  string  $prefix
+     * @param  string    $view
+     * @param  string    $class
+     * @param  string    $prefix
      * @return \Closure
      */
     protected function addClassEvent($view, $class, $prefix)
@@ -115,13 +115,15 @@ trait ManagesEvents
      */
     protected function buildClassEventCallback($class, $prefix)
     {
-        [$class, $method] = $this->parseClassEvent($class, $prefix);
+        list($class, $method) = $this->parseClassEvent($class, $prefix);
 
         // Once we have the class and method name, we can build the Closure to resolve
         // the instance out of the IoC container and call the method on it with the
         // given arguments that are passed to the Closure as the composer's data.
         return function () use ($class, $method) {
-            return $this->container->make($class)->{$method}(...func_get_args());
+            return call_user_func_array(
+                [$this->container->make($class), $method], func_get_args()
+            );
         };
     }
 
@@ -145,19 +147,19 @@ trait ManagesEvents
      */
     protected function classEventMethodForPrefix($prefix)
     {
-        return str_contains($prefix, 'composing') ? 'compose' : 'create';
+        return Str::contains($prefix, 'composing') ? 'compose' : 'create';
     }
 
     /**
      * Add a listener to the event dispatcher.
      *
-     * @param  string  $name
+     * @param  string    $name
      * @param  \Closure  $callback
      * @return void
      */
     protected function addEventListener($name, $callback)
     {
-        if (str_contains($name, '*')) {
+        if (Str::contains($name, '*')) {
             $callback = function ($name, array $data) use ($callback) {
                 return $callback($data[0]);
             };
@@ -174,9 +176,7 @@ trait ManagesEvents
      */
     public function callComposer(ViewContract $view)
     {
-        if ($this->events->hasListeners($event = 'composing: '.$view->name())) {
-            $this->events->dispatch($event, [$view]);
-        }
+        $this->events->fire('composing: '.$view->name(), [$view]);
     }
 
     /**
@@ -187,8 +187,6 @@ trait ManagesEvents
      */
     public function callCreator(ViewContract $view)
     {
-        if ($this->events->hasListeners($event = 'creating: '.$view->name())) {
-            $this->events->dispatch($event, [$view]);
-        }
+        $this->events->fire('creating: '.$view->name(), [$view]);
     }
 }

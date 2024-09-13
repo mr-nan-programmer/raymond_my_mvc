@@ -18,25 +18,29 @@ namespace Symfony\Component\Finder;
  */
 class SplFileInfo extends \SplFileInfo
 {
+    private $relativePath;
+    private $relativePathname;
+
     /**
      * @param string $file             The file name
      * @param string $relativePath     The relative path
      * @param string $relativePathname The relative path name
      */
-    public function __construct(
-        string $file,
-        private string $relativePath,
-        private string $relativePathname,
-    ) {
+    public function __construct($file, $relativePath, $relativePathname)
+    {
         parent::__construct($file);
+        $this->relativePath = $relativePath;
+        $this->relativePathname = $relativePathname;
     }
 
     /**
      * Returns the relative path.
      *
      * This path does not contain the file name.
+     *
+     * @return string the relative path
      */
-    public function getRelativePath(): string
+    public function getRelativePath()
     {
         return $this->relativePath;
     }
@@ -45,32 +49,26 @@ class SplFileInfo extends \SplFileInfo
      * Returns the relative path name.
      *
      * This path contains the file name.
+     *
+     * @return string the relative path name
      */
-    public function getRelativePathname(): string
+    public function getRelativePathname()
     {
         return $this->relativePathname;
-    }
-
-    public function getFilenameWithoutExtension(): string
-    {
-        $filename = $this->getFilename();
-
-        return pathinfo($filename, \PATHINFO_FILENAME);
     }
 
     /**
      * Returns the contents of the file.
      *
+     * @return string the contents of the file
+     *
      * @throws \RuntimeException
      */
-    public function getContents(): string
+    public function getContents()
     {
         set_error_handler(function ($type, $msg) use (&$error) { $error = $msg; });
-        try {
-            $content = file_get_contents($this->getPathname());
-        } finally {
-            restore_error_handler();
-        }
+        $content = file_get_contents($this->getPathname());
+        restore_error_handler();
         if (false === $content) {
             throw new \RuntimeException($error);
         }

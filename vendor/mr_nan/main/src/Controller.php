@@ -15,10 +15,9 @@ class Controller
         $validation->validate();
         return $validation;
     }
-    protected function render(string $view , array $data = []) :string
+    protected function render(string $view , array $data = [])
     {
-        $view_eng=new view_engine();
-        return $view_eng->render($view,$data);
+        return (new view_engine)->render($view,$data);
 
 
     }

@@ -1,11 +1,12 @@
-@extends('layout.master')
-@section("default")
-    {{$selected_default}}
-@endsection
-@section("a-z")
-    {{$selected_a_z}}
-@endsection
-@section('content')
+<?php $__env->startSection("default"); ?>
+    <?php echo e($selected_default); ?>
+
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection("a-z"); ?>
+    <?php echo e($selected_a_z); ?>
+
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
 
     <!-- Modal -->
     <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -40,33 +41,33 @@
                             <i class="fa fa-fw fa-chevron-circle-down mt-1"></i>
                         </a>
                         <ul class="collapse show list-unstyled pl-3 ">
-                            <li><input class="text-decoration-none form-check-input"  name="filter_one" type="radio" value="all" {{$checked}} >All</li>
+                            <li><input class="text-decoration-none form-check-input"  name="filter_one" type="radio" value="all" <?php echo e($checked); ?> >All</li>
 
-                            <li><input class="text-decoration-none form-check-input"  name="filter_one" type="radio" value="fiber" {{$selected_a_z}}}>Fiber Laser</li>
-                            <li><input class="text-decoration-none form-check-input"  name="filter_one" type="radio" value="co2" {{$checked_co2}}>Co2 Lase</li>
+                            <li><input class="text-decoration-none form-check-input"  name="filter_one" type="radio" value="fiber" <?php echo e($selected_a_z); ?>}>Fiber Laser</li>
+                            <li><input class="text-decoration-none form-check-input"  name="filter_one" type="radio" value="co2" <?php echo e($checked_co2); ?>>Co2 Lase</li>
                         </ul>
                     </li>
-{{--                    <li class="pb-3">--}}
-{{--                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">--}}
-{{--                            Sale--}}
-{{--                            <i class="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>--}}
-{{--                        </a>--}}
-{{--                        <ul id="collapseTwo" class="collapse list-unstyled pl-3">--}}
-{{--                            <li><a class="text-decoration-none" href="#">Sport</a></li>--}}
-{{--                            <li><a class="text-decoration-none" href="#">Luxury</a></li>--}}
-{{--                        </ul>--}}
-{{--                    </li>--}}
-{{--                    <li class="pb-3">--}}
-{{--                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">--}}
-{{--                            Product--}}
-{{--                            <i class="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>--}}
-{{--                        </a>--}}
-{{--                        <ul id="collapseThree" class="collapse list-unstyled pl-3">--}}
-{{--                            <li><a class="text-decoration-none" href="#">Bag</a></li>--}}
-{{--                            <li><a class="text-decoration-none" href="#">Sweather</a></li>--}}
-{{--                            <li><a class="text-decoration-none" href="#">Sunglass</a></li>--}}
-{{--                        </ul>--}}
-{{--                    </li>--}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 </ul>
                 <input class="btn btn-danger" type="submit" value="submit Filters">
             </div>
@@ -89,8 +90,8 @@
                     <div class="col-md-6 pb-4">
                         <div class="d-flex">
                             <select name="filter_z" class="form-control">
-                                <option value="default" @yield("default"," ") >default</option>
-                                <option value="a-z"  @yield("a-z"," ") > A to Z</option>
+                                <option value="default" <?php echo $__env->yieldContent("default"," "); ?> >default</option>
+                                <option value="a-z"  <?php echo $__env->yieldContent("a-z"," "); ?> > A to Z</option>
                             </select>
                         </div>
                     </div>
@@ -260,4 +261,5 @@
     <!--End Brands-->
 
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

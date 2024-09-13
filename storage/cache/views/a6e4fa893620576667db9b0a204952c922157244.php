@@ -99,7 +99,7 @@
 
                             <ul >
                                 <li>
-                                    <a href="EN" >English</a>
+                                    <a href="en" >English</a>
                                 </li>
                                 <li>
                                     <a href="/" >Chinese</a>
