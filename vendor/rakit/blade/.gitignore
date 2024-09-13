@@ -1,0 +1,4 @@
+vendor/
+tests/caches/*
+!tests/caches/.gitkeep
+composer.lock
