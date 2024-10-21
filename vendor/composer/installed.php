@@ -85,7 +85,7 @@
         'mr_nan/main' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'e7f0e9f04f871f903c33e1ec6fa1bab64fd59090',
+            'reference' => '150d05038f16ffe59535a4c4e92e1125c8198351',
             'type' => 'lib',
             'install_path' => __DIR__ . '/../mr_nan/main',
             'aliases' => array(),

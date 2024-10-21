@@ -1,4 +1,5 @@
 {
+
     "name": "mr_nan/framwork",
     "description": "learning",
     "type": "project",
@@ -12,7 +13,8 @@
         "mr_nan/main" : "dev-main",
         "respect/validation": "^2.3",
         "rakit/validation": "^1.4",
-        "rakit/blade": "^5.4"
+        "rakit/blade": "^5.4",
+      "ext-pdo": "*"
     },
     "repositories": [{
         "type": "path",

@@ -3,6 +3,7 @@
 
 
 use Rakit\Blade\Blade;
+use Rakit\Validation\ErrorBag;
 
 class view_engine
 {
@@ -13,6 +14,11 @@ class view_engine
 
         $this->blade=new Blade([Application::$ROOT_DIR . "/resources/views"],Application::$ROOT_DIR . "/storage/cache/views"
         );
+        $this->blade->share('errors', session()->flash('errors') ?? new ErrorBag());
+        $this->blade->share("old",function ($key){
+            $inputs= session()->flash("old_inputs") ?? [];
+            return $inputs[$key]?? "";
+        });
     }
 
     public function render(string $view , array $data = []) : string

@@ -27,6 +27,7 @@
 
 
     <!-- Start Content -->
+
     <form action="" method="get">
     <div class="container py-5">
         <div class="row">
@@ -42,7 +43,7 @@
                         <ul class="collapse show list-unstyled pl-3 ">
                             <li><input class="text-decoration-none form-check-input"  name="filter_one" type="radio" value="all" {{$checked}} >All</li>
 
-                            <li><input class="text-decoration-none form-check-input"  name="filter_one" type="radio" value="fiber" {{$selected_a_z}}}>Fiber Laser</li>
+                            <li><input class="text-decoration-none form-check-input"  name="filter_one" type="radio" value="fiber" {{$checked_fiber}}>Fiber Laser</li>
                             <li><input class="text-decoration-none form-check-input"  name="filter_one" type="radio" value="co2" {{$checked_co2}}>Co2 Lase</li>
                         </ul>
                     </li>

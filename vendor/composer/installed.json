@@ -433,14 +433,17 @@
             "dist": {
                 "type": "path",
                 "url": "main",
-                "reference": "e7f0e9f04f871f903c33e1ec6fa1bab64fd59090"
+                "reference": "150d05038f16ffe59535a4c4e92e1125c8198351"
             },
             "type": "lib",
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "MrNan\\Main\\": "src/"
-                }
+                },
+                "files": [
+                    "./src/helpers.php"
+                ]
             },
             "license": [
                 "MIT"

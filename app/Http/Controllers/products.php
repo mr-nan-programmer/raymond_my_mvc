@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Prudocts;
 use MrNan\Main\Controller;
 use MrNan\Main\Requsts;
 
 class products extends Controller
 {
+
 public function index()
 {
     $requests=new Requsts();
@@ -50,7 +52,14 @@ public function index()
         }
 
     }
+    $prudocts=new Prudocts();
+    $datas=[
+        "name"=>'tube w4 ',
+        "about"=> 'this tube  good  ',
+        "score"=> '10'
+    ];
 
+//    var_dump( $prudocts->select('id','name')->get(4));
         echo $this->render("5page.products",$data);
 
 

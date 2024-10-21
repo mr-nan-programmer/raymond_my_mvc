@@ -32,12 +32,11 @@ if ($validation->fails()) {
     echo "</pre>";
     exit;
 } else {
-    // validation passes
-    echo "Success!";
+ echo "<script>alert('感谢您注册您的电子邮件')</script>";
 }
 
     }
-    public function index()
+    public function index() :void
 
     {
 

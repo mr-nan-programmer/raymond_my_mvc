@@ -40,10 +40,10 @@ class Requsts{
     }
     public function get_requst( $method, string $key) : ?string
     {
-        if ($method==1) {
+        if ($method==2) {
             return $this->all_request_spc()['get'][$key] ?? null;
         }
-        if ($method==2){
+        if ($method==1){
             return  $this->all_request_spc()['post'][$key] ?? null;
         }
       return null;

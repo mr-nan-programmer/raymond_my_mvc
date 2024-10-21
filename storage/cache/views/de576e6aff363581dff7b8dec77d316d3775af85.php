@@ -43,7 +43,7 @@
                         <ul class="collapse show list-unstyled pl-3 ">
                             <li><input class="text-decoration-none form-check-input"  name="filter_one" type="radio" value="all" <?php echo e($checked); ?> >All</li>
 
-                            <li><input class="text-decoration-none form-check-input"  name="filter_one" type="radio" value="fiber" <?php echo e($selected_a_z); ?>}>Fiber Laser</li>
+                            <li><input class="text-decoration-none form-check-input"  name="filter_one" type="radio" value="fiber" <?php echo e($checked_fiber); ?>>Fiber Laser</li>
                             <li><input class="text-decoration-none form-check-input"  name="filter_one" type="radio" value="co2" <?php echo e($checked_co2); ?>>Co2 Lase</li>
                         </ul>
                     </li>

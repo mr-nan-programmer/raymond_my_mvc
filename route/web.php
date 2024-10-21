@@ -1,11 +1,13 @@
 <?php
 
 use App\Http\Controllers\about_and_contact;
+use App\Http\Controllers\auth\RegisterController;
 use App\Http\Controllers\en_routes;
 use App\Http\Controllers\home_controllers;
 use App\Http\Controllers\products;
 use MrNan\Main\Router ;
 use MrNan\Main\Requsts ;
+Router::call_page("/auth",[RegisterController::class,"registerview"],[RegisterController::class,"register"]);
 
 Router::call_page("/",[home_controllers::class,"index"],[home_controllers::class,"backend"]);
 Router::call_page("/about",[about_and_contact::class,"about"],[about_and_contact::class,"backend"]);

@@ -8,6 +8,7 @@ class en_routes extends Controller
 {
     public function index(){
     echo  $this->render("en_routes.index");
+
     }
     public function contact(){
         echo  $this->render("en_routes.index");

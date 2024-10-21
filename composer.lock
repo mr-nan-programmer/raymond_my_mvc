@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "925b16c7d90164d24e59da21fd80af42",
+    "content-hash": "e48503b014be48b8d511ac708762e343",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -417,13 +417,16 @@
             "dist": {
                 "type": "path",
                 "url": "main",
-                "reference": "e7f0e9f04f871f903c33e1ec6fa1bab64fd59090"
+                "reference": "150d05038f16ffe59535a4c4e92e1125c8198351"
             },
             "type": "lib",
             "autoload": {
                 "psr-4": {
                     "MrNan\\Main\\": "src/"
-                }
+                },
+                "files": [
+                    "./src/helpers.php"
+                ]
             },
             "license": [
                 "MIT"
@@ -968,7 +971,9 @@
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "ext-pdo": "*"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.6.0"
 }

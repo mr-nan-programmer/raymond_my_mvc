@@ -1,4 +1,6 @@
 @extends('layout.master')
+@section("title","about us")
+
 @section('content')
     <!-- 模态框 -->
     <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
