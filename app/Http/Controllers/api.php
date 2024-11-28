@@ -6,6 +6,7 @@ class api
 {
 public function index(){
 
+    file_put_contents("./test webhook.txt" ,"ok");
 
 // Secret key که در تنظیمات Webhook گیت‌هاب تنظیم کرده‌اید
     $secret = 'yiwutraderaymond2024';
@@ -18,7 +19,6 @@ public function index(){
     if (!$signature || !hash_equals('sha1=' . hash_hmac('sha1', $payload, $secret), $signature)) {
         http_response_code(403);
         die('Invalid signature.');
-        file_put_contents("./test webhook.txt" ,"ok");
     }
 
 // پردازش اطلاعات درخواست
