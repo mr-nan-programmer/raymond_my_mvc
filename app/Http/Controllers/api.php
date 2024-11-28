@@ -30,7 +30,7 @@ public function index(){
 
         // اجرای دستور git pull
         chdir($projectDir);
-        $output = shell_exec('git pull https://github.com/mr-nan-programmer/raymond_my_mvc 2>&1');
+        $output = shell_exec('git pull 2>&1');
 
         // ثبت خروجی برای بررسی
         file_put_contents('webhook_log.txt', $output, FILE_APPEND);
