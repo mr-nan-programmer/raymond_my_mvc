@@ -6,7 +6,6 @@ class api
 {
 public function index(){
 
-    file_put_contents("./test webhook.txt" ,"ok");
 
 // Secret key که در تنظیمات Webhook گیت‌هاب تنظیم کرده‌اید
     $secret = 'yiwutraderaymond2024';
@@ -27,11 +26,11 @@ public function index(){
 // بررسی اینکه آیا تغییرات روی شاخه اصلی (main) بوده است
     if (isset($data['ref']) && $data['ref'] === 'refs/heads/main') {
         // مسیر پروژه روی سرور
-        $projectDir = '../../';
+        $projectDir = './../';
 
         // اجرای دستور git pull
         chdir($projectDir);
-        $output = shell_exec('git pull 2>&1');
+        $output = shell_exec('git pull https://github.com/mr-nan-programmer/raymond_my_mvc 2>&1');
 
         // ثبت خروجی برای بررسی
         file_put_contents('webhook_log.txt', $output, FILE_APPEND);
