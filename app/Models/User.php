@@ -7,7 +7,7 @@ use PDOStatement;
 
 class User extends Model
 {
-    static $TABLENAME = "prudocts";
+    protected string $table= "users";
 
 
 }

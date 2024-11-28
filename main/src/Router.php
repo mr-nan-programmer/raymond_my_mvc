@@ -1,8 +1,10 @@
 <?php namespace MrNan\Main;
-use MongoDB\Driver\Exception\Exception;
+use MrNan\Main\Exception\NotFoundExeptions;
+use MrNan\Main\Exception\Updating;
 use ReflectionMethod;
 
 class Router{
+    private $isupdate;
     public $requsts;
     protected $router_files =[];
     static public $callpage=[
@@ -54,9 +56,13 @@ class Router{
         }
         return false;
     }
+     public function updating_websit(){
+        $this->isupdate=true;
 
+    }
     static public function call_page($url, $get=null, $post=null)
     {
+
 
        self::$callpage["get"][$url]=$get ;
        self::$callpage["post"][$url]=$post ;
@@ -66,11 +72,13 @@ class Router{
     $this->router_files[$path]=$path;
     return $this ;
     }
-    public function set_stractcher($url,$callback)
-    {
-        self::$straccher["header"][$url]=$callback;
-    }
+
     public function resolver(){
+
+        if($this->isupdate)
+            throw new Updating();
+
+
         foreach ($this->router_files as $path=>$file) {
             require_once $file;
         }
@@ -82,14 +90,18 @@ class Router{
         $params_dynamic=[];
         if (!$callback ){
         $rotecallback=$this->getcallbackfromdynamicroute();
-        if(!$rotecallback){
-            throw new \Exception("No route found for $url");
+
+            if(!$rotecallback){
+            throw new NotFoundExeptions();
 
 
         }
         $callback=$rotecallback[0];
         $params_dynamic=array_values($rotecallback[1]);
 
+        }
+        if(is_string($callback)) {
+            return app()->view_engine->render($callback);
         }
        $autoinjection=[];
         if (is_array($callback)){

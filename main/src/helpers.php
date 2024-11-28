@@ -2,6 +2,7 @@
 
 use JetBrains\PhpStorm\NoReturn;
 use MrNan\Main\Application;
+use MrNan\Main\Auth;
 use MrNan\Main\Requsts;
 use MrNan\Main\Response;
 use MrNan\Main\Session;
@@ -47,5 +48,12 @@ if (!class_exists('session')){
     {
 
         return app()->session;
+    }
+}
+if (!class_exists('auth')){
+    function auth( ): Auth
+    {
+
+        return new Auth();
     }
 }

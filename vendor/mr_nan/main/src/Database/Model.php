@@ -1,120 +1,171 @@
 <?php
-
 namespace MrNan\Main\Database;
-//crud  -> Create Read Update Delete
-use PDO;
+
+
+// CRUD READ DELETE
+use MrNan\Main\Database\Database;
 use PDOStatement;
 
 class Model extends Database
 {
-    protected array|string $selectedItems;
-    protected array $whereList=[];
+    protected string $table;
+    protected PDOStatement $statement;
+    protected int $fetchMode = \PDO::FETCH_OBJ;
+    protected array $selectedItems = [];
     protected int $limit;
-    protected array $valuesForBind =[];
-    public PDOStatement $statement;
-    protected  $fetchMethod;
-    public function update(int $id,array $data) :bool
-    {
+    protected array $whereList = [];
+    protected array $valuesForBind = [];
 
-        $dataKeys=array_keys($data);
-        $fields_update=array_map(fn($key)=>"$key=:$key",$dataKeys);
-        $fields_update=implode(",",$fields_update);
-        $this->statement= $this->pdo->prepare("UPDATE $this->tablename SET $fields_update WHERE id=:id");
-        $this->bindvalues(array_merge($data,['id'=>$id]));
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    public function create(array $data) : bool
+    {
+        $keysOfData = array_keys($data); //
+
+        $fields = implode("," , $keysOfData); // "title , body"
+        $params = implode("," ,array_map(fn($key) => ":$key", $keysOfData)); // ":title , :body"
+
+        $this->statement = $this->pdo->prepare("INSERT INTO {$this->table} ($fields) VALUES ($params)");
+
+        $this->bindValues($data);
+
         return $this->statement->execute();
-//UPDATE PRUDOCTS SET TITLE =
     }
-    public function where(string $name , $value, string $operator = '=')
+
+    public function update(int $id ,array $data) : bool
     {
-    $this->whereList[]="$name $operator $value :name";
-    $this->valuesForBind[$name]=$value;
-    $this->bindValue();
+        $fieldsOfUpdate =  array_map(fn($key) => "$key = :$key" , array_keys($data));
+        $fieldsOfUpdate = implode("," , $fieldsOfUpdate);
+
+        $this->statement = $this->pdo->prepare("UPDATE articles SET $fieldsOfUpdate WHERE id = :id");
+
+        $this->bindValues( array_merge($data , [ 'id' => $id] ));
+
+        return $this->statement->execute();
+    }
+
+    public function delete(int $id) : bool
+    {
+        $this->statement = $this->pdo->prepare("DELETE FROM {$this->table} WHERE id = :id");
+
+        $this->bindValues(['id' => $id]);
+
+        return $this->statement->execute();
+    }
+
+    public function from(string $table) : self
+    {
+        $this->table = $table;
+
         return $this;
-
     }
-    public function limit(int $limit) :self
+
+
+    public function select() : self
     {
-        $this->limit=$limit;
+        $this->selectedItems = func_get_args();
+
         return $this;
-
     }
-    public function select() :self
+
+    public function limit(int $limit) : self
     {
+        $this->limit = $limit;
 
-    $this->selectedItems=func_get_args();
-    return $this;
+        return $this;
     }
-    public function creat($data) :bool {
 
-
-        $Key_Data=array_keys($data);
-        $fileds=implode(",",$Key_Data);
-        $params =implode(",",array_map(fn($keys)=>":$keys", $Key_Data)  );
-        $this->statement= $this->pdo->prepare("INSERT INTO {self::TABLENAME}   ($fileds) values ($params)");
-        $this->bindvalues($data);
-    }
-    public function find($value,$filed = 'id')
+    // name value operator
+    public function where(string $name , string|bool|int $value , string $operator = "=") : self
     {
-    return $this->where($filed,$value)->first() ;
+        $this->whereList[] = "$name $operator :$name";
+
+        $this->valuesForBind[$name] = $value;
+
+        return $this;
     }
-    public function delete(int $id) :bool
+
+    public function result() : self
     {
-        $this->statement=$this->pdo->prepare("DELETE FROM $this->tablename WHERE id=:id");
-     $this->bindvalues(['id'=>$id]);
-     return $this->statement->execute();
+        $query = ["SELECT"];
+
+        $query[] = count($this->selectedItems) ? implode("," , $this->selectedItems) : "*";
+
+        $query[] = "FROM {$this->table}";
+
+        if( count($this->whereList) )
+            $query[] = $this->prepareWhereStatement();
+
+        if(! empty($this->limit) )
+            $query[] = "LIMIT {$this->limit}";
+
+        $this->statement = $this->pdo->prepare(implode(" " , $query));
+        $this->bindValues();
+        $this->statement->execute();
+
+        return $this;
     }
-    public function result() :self
-{
-    $query=["SELECT"];
-    $query[] = count($this->selectedItems)? implode(',',$this->selectedItems):"*";
-    $query[] ="FROM {$this->tablename}";
-    if(count($this->whereList))
-        $query[]= $this->prepareWhereStatment();
-    $this->statement= $this->pdo->prepare(implode(" ",$query));
-    if (!empty($this->limit))
-        $query[]="LIMIT {$this->limit}";
-    $this->statement->execute();
-    return $this;
-}
 
-
-protected function prepareWhereStatment() :string
-{
-//    "WHERE id= :id AND title = :title"
-    $query[]="WHERE";
-    foreach ($this->whereList as $key=>$value){
-        if($key !==array_key_first($this->whereList)) $query[]="AND";
-        $query[]=$value;
-    }
-    return implode(" ",$query);
-}
-
-
-    public function get () : bool|array
+    protected function prepareWhereStatement() : string
     {
-      return  $this->result()->fetch('fetch');
+        // "where id = :id AND title = :title"
+        $query[] = "WHERE";
 
+        foreach($this->whereList as $key => $value) {
+            if($key !== array_key_first($this->whereList)) $query[] = "AND";
+
+            $query[] = $value;
+        }
+
+
+        return implode(" " , $query);
+    }
+
+    public function find($value , $field = 'id')
+    {
+        return $this->where($field , $value)->first();
+    }
+
+    public function get(): bool|array
+    {
+        return $this->result()->fetch();
     }
 
     public function first()
     {
         return  $this->limit(1)->result()->fetch('fetch');
-
-
     }
-    public function fetch($fetchMethod='fetchAll')
+
+    public function fetch($fetchMethod = 'fetchAll')
     {
-
-        return $this->statement->fetch($this->fetchMethod);
-
+        return $this->statement->{$fetchMethod}($this->fetchMode);
     }
-    protected function bindvalues(?array $data= null) : void
+
+    protected function bindValues(?array $data = null) : void
     {
-        if($data){
-            $this->valuesForBind =array_merge($this->valuesForBind,$data);
+        if($data) {
+            $this->valuesForBind = array_merge($this->valuesForBind , $data);
         }
-        foreach ($this->valuesForBind as $key => $value) {
+
+        foreach($this->valuesForBind as $key => $value) {
             $this->statement->bindValue($key, $value);
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

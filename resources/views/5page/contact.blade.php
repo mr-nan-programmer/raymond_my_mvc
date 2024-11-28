@@ -1,4 +1,6 @@
-@extends('layout.master')
+@extends('layout.route')
+@section("title","contact")
+
 @section('content')
 
     <!-- 模态框 -->

@@ -1,4 +1,5 @@
 @extends('layout.en_master')
+@section("title","contact")
 @section('content')
 
     <!-- Modal -->

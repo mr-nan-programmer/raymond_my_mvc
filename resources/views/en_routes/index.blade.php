@@ -1,5 +1,6 @@
 
 @extends('layout.en_master')
+@section("title","Raymond Trade")
 @section('content')
 
     <!-- Modal -->
@@ -19,8 +20,6 @@
         </div>
     </div>
 
-
-
     <!-- Start Banner Hero -->
     <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
         <ol class="carousel-indicators">
@@ -33,14 +32,14 @@
                 <div class="container">
                     <div class="row p-5">
                         <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="./assets/img/fiber.png" alt="">
+                            <img class="img-fluid" src="./public/assets/img/uptrade.png" alt="">
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left align-self-center">
-                                <h1 class="h1 text-success"><b>Raymond </b>Laser</h1>
-                                <h3 class="h2">Raymond in addition to laser cutting machines</h3>
+                                <h1 class="h1 text-success"><b>Raymond</b> Trade</h1>
+                                <h3 class="h2">Trade Made Easy</h3>
                                 <p>
-                                    Raymond has entered the laser field! Build your own factory at the lowest cost by requesting a<strong> free  </strong> consultation in this regard
+                                    Upgrade your trading with <strong>Raymond Trade</strong>. <br> Experience secure and direct transactions with us!
                                 </p>
                             </div>
                         </div>
@@ -51,14 +50,14 @@
                 <div class="container">
                     <div class="row p-5">
                         <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="./assets/img/fiber_2.png" alt="">
+                            <img class="img-fluid" src="./public/assets/img/karshenas.png" alt="">
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left">
-                                <h1 class="h1">Variety of products</h1>
-                                <h3 class="h2">Selling all kinds of cutting and engraving machines</h3>
+                                <h1 class="h1">Quality Assurance</h1>
+                                <h3 class="h2">Rest Assured About Authenticity!</h3>
                                 <p>
-                                    All kinds of devices with different and amazing features can be consulted for free on Raymond's website and buy online!
+                                    Every product you order from us is checked and verified by our experts for authenticity and quality before shipping.
                                 </p>
                             </div>
                         </div>
@@ -69,14 +68,14 @@
                 <div class="container">
                     <div class="row p-5">
                         <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="./assets/img/surce.png" alt="">
+                            <img class="img-fluid" src="./public/assets/img/hamlonaghl.png" alt="">
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left">
-                                <h1 class="h1">All kinds of parts</h1>
-                                <h3 class="h2">Do not worry about the device parts </h3>
+                                <h1 class="h1">Flexible Shipping</h1>
+                                <h3 class="h2">Get Your Order, Anywhere, Any Way!</h3>
                                 <p>
-                                    On Raymond's website, you can buy all the consumables or spare parts of your laser cutting machine online, and if you need an installer to install it, just call and the installer will be sent to your place in a certain time to install and repair your machine.
+                                    At Raymond, we give you the freedom to receive your order exactly the way you want, using your preferred shipping method, anywhere in the world!
                                 </p>
                             </div>
                         </div>
@@ -93,37 +92,34 @@
     </div>
     <!-- End Banner Hero -->
 
-
     <!-- Start Categories of The Month -->
     <section class="container py-5">
         <div class="row text-center pt-3">
             <div class="col-lg-6 m-auto">
-                <h1 class="h1">Product categories</h1>
+                <h1 class="h1">Product Categories</h1>
                 <p>
-                    General classification of all Raymond products .
+                    Suggested and high-profit product categories.
                 </p>
             </div>
         </div>
         <div class="row list-type">
-
             <div class="col-12 col-md-4 p-5 mt-3">
-                <a href="#"><img src="./assets/img/laser.png" class="rounded-circle img-fluid border img-type"></a>
-                <h2 class="h5 text-center mt-3 mb-3">Laser machine</h2>
-                <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
+                <a href="#"><img src="./public/assets/img/digipart.jpg" class="rounded-circle img-fluid border img-type"></a>
+                <h2 class="h5 text-center mt-3 mb-3">Digital Devices</h2>
+                <p class="text-center"><a class="btn btn-success">View All</a></p>
             </div>
         </div>
     </section>
     <!-- End Categories of The Month -->
-
 
     <!-- Start Featured Product -->
     <section class="bg-light">
         <div class="container py-5">
             <div class="row text-center py-3">
                 <div class="col-lg-6 m-auto">
-                    <h1 class="h1">The latest products</h1>
+                    <h1 class="h1">Most Profitable Recent Products</h1>
                     <p>
-                        Find out about the latest Raymond products in this section.
+                        Our experts have selected the following products for their high profitability.
                     </p>
                 </div>
             </div>
@@ -131,7 +127,7 @@
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
                         <a href="shop-single.html">
-                            <img src="./assets/img/tasmeh.png" class="card-img-top" alt="...">
+                            <img src="./public/assets/img/translate_gb.png" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
@@ -142,61 +138,13 @@
                                     <i class="text-muted fa fa-star"></i>
                                     <i class="text-muted fa fa-star"></i>
                                 </li>
-                                <li class="text-muted text-right">$240.00</li>
+                                <li class="text-muted text-right">4,500,000 Toman</li>
                             </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gym Weight</a>
+                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Pocket Translator</a>
                             <p class="card-text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.
+                                This compact, lightweight device is highly useful and leverages artificial intelligence (AI) technology.
                             </p>
-                            <p class="text-muted">Reviews (24)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <a href="shop-single.html">
-                            <img src="./assets/img/chiler.png" class="card-img-top" alt="...">
-                        </a>
-                        <div class="card-body">
-                            <ul class="list-unstyled d-flex justify-content-between">
-                                <li>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                </li>
-                                <li class="text-muted text-right">$480.00</li>
-                            </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Cloud Nike Shoes</a>
-                            <p class="card-text">
-                                Aenean gravida dignissim finibus. Nullam ipsum diam, posuere vitae pharetra sed, commodo ullamcorper.
-                            </p>
-                            <p class="text-muted">Reviews (48)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <a href="shop-single.html">
-                            <img src="./assets/img/fiber_marcking.png" class="card-img-top" alt="...">
-                        </a>
-                        <div class="card-body">
-                            <ul class="list-unstyled d-flex justify-content-between">
-                                <li>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                </li>
-                                <li class="text-muted text-right">$360.00</li>
-                            </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Summer Addides Shoes</a>
-                            <p class="card-text">
-                                Curabitur ac mi sit amet diam luctus porta. Phasellus pulvinar sagittis diam, et scelerisque ipsum lobortis nec.
-                            </p>
-                            <p class="text-muted">Reviews (74)</p>
+                            <p class="text-muted">Views (24)</p>
                         </div>
                     </div>
                 </div>

@@ -10,6 +10,10 @@ Custom Css
 .lang-menu{
     display: none;
 }
+#body-fa{
+    direction: rtl !important;
+    text-align: right !important;
+}
 .lang-nav:hover  .lang-menu{
     display: block !important;
 

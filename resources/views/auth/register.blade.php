@@ -1,6 +1,8 @@
 @extends('layout.master')
+@section("title","register")
+
 @section('specialLink')
-    <link rel="stylesheet" href="assets/css/form.css">
+    <link rel="stylesheet" href="public/assets/css/form.css">
 
 @endsection
 @section('content')
