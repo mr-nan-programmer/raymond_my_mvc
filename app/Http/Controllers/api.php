@@ -18,6 +18,7 @@ public function index(){
     if (!$signature || !hash_equals('sha1=' . hash_hmac('sha1', $payload, $secret), $signature)) {
         http_response_code(403);
         die('Invalid signature.');
+        file_put_contents("./test webhook.txt" ,"ok");
     }
 
 // پردازش اطلاعات درخواست
@@ -26,7 +27,7 @@ public function index(){
 // بررسی اینکه آیا تغییرات روی شاخه اصلی (main) بوده است
     if (isset($data['ref']) && $data['ref'] === 'refs/heads/main') {
         // مسیر پروژه روی سرور
-        $projectDir = './';
+        $projectDir = '../../';
 
         // اجرای دستور git pull
         chdir($projectDir);
