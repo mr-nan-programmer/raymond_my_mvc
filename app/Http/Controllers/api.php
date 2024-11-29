@@ -27,7 +27,7 @@ public function index(){
         file_put_contents('webhook_log.txt',$payload, FILE_APPEND);
 
         // مسیر پروژه روی سرور
-        $projectDir = '/home/yiwuraym/public_html';
+        $projectDir = '/home/yiwuraym/public_html/raymond_my_mvc';
 
         // git pull
         chdir($projectDir);
