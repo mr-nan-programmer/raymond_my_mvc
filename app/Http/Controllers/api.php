@@ -24,7 +24,7 @@ public function index(){
 
 // بررسی اینکه آیا تغییرات روی شاخه اصلی (main) بوده است
     if (isset($data['ref']) && $data['ref'] === 'refs/heads/main') {
-        file_put_contents('webhook_log.txt',json_decode($payload, true), FILE_APPEND);
+        file_put_contents('webhook_log.txt',$payload, FILE_APPEND);
 
         // مسیر پروژه روی سرور
         $projectDir = './../';
