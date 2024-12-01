@@ -1,4 +1,4 @@
-@extends('layout.en_master')
+@extends('layout.fa_master')
 @section('content')
     <!-- Modal -->
     <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

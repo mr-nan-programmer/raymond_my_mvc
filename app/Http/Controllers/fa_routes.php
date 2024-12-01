@@ -11,7 +11,7 @@ class fa_routes extends Controller
 
     }
     public function contact(){
-        echo  $this->render("fa_routes.index");
+        echo  $this->render("fa_routes.contact");
 
     }
     public function about(){
