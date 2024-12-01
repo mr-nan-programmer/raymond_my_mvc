@@ -20,7 +20,7 @@ class en_routes extends Controller
     }
     public function products()
     {
-        echo  $this->render("en_routes.index");
+        echo  $this->render("en_routes.products");
 
     }
 }

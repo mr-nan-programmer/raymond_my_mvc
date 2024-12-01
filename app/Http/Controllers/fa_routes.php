@@ -20,7 +20,7 @@ class fa_routes extends Controller
     }
     public function products()
     {
-        echo  $this->render("fa_routes.sd");
+        echo  $this->render("fa_routes.products");
 
     }
 }

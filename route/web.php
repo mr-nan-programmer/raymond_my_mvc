@@ -33,6 +33,7 @@ Router::call_page("/",[home_controllers::class,"index"],[email_veifay::class,"ba
 Router::call_page("/about",[about_and_contact::class,"about"],[email_veifay::class,"backend"]);
 Router::call_page("/contact",[about_and_contact::class,"contact"],[email_veifay::class,"backend"]);
 Router::call_page("/products",[products::class,"index"],[products::class,"backend"]);
+
 Router::call_page("/en",[en_routes::class,"index"],[email_veifay::class,"backend"]);
 Router::call_page("/en/about",[en_routes::class,"about"],[email_veifay::class,"backend"]);
 Router::call_page("/en/contact",[en_routes::class,"contact"],[en_routes::class,"backend"]);
