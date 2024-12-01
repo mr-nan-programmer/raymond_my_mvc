@@ -54,13 +54,13 @@
                         <a class="nav-link" href="/">خانه</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">درباره ما</a>
+                        <a class="nav-link" href="/fa/about">درباره ما</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">ارتباط با ما</a>
+                        <a class="nav-link" href="/fa/contact">ارتباط با ما</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="shop.html">محصولات</a>
+                        <a class="nav-link" href="fa/products">محصولات</a>
                     </li>
 
                 </ul>

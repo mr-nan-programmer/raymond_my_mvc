@@ -23,6 +23,10 @@ Router::call_page("/adminray",[Admin_panel::class,"index"],[Admin_panel::class,"
 Router::call_page("/adminray/developer",[developer::class,"index"],[developer::class,"request"]);
 
 Router::call_page("/fa",[fa_routes::class,"index"],[Admin_panel::class,"back"]);
+Router::call_page("/fa/about",[fa_routes::class,"about"],[Admin_panel::class,"back"]);
+Router::call_page("/fa/contact",[fa_routes::class,"contact"],[Admin_panel::class,"back"]);
+Router::call_page("/fa/products",[fa_routes::class,"products"],[Admin_panel::class,"back"]);
+
 
 Router::call_page("/addstoreray",[Stores::class,"addstore"],[Stores::class,"adding_process"]);
 Router::call_page("/",[home_controllers::class,"index"],[email_veifay::class,"backend"]);

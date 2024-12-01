@@ -30,7 +30,7 @@
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <img src="assets/img/about-hero.png" alt="关于雷蒙德">
+                    <img src="https:/https://yiwuraymondcom.com/public/assets/img/about-hero.png" alt="关于雷蒙德">
                 </div>
             </div>
         </div>
