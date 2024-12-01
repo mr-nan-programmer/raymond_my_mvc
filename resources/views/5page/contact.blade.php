@@ -1,4 +1,4 @@
-@extends('layout.route')
+@extends('layout.master')
 @section("title","联系我们 | Raymond")
 
 @section('content')
