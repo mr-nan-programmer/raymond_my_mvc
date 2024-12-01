@@ -142,7 +142,7 @@
 
     </div>
 
-    <div class="row text-light mb-4">
+    <div class="row text-light mb-4" style="    max-width: 100%;">
         <div class="col-12 mb-3">
             <div class="w-100 my-3 border-top border-light"></div>
         </div>

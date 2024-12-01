@@ -11,7 +11,7 @@ class en_routes extends Controller
 
     }
     public function contact(){
-        echo  $this->render("en_routes.index");
+        echo  $this->render("en_routes.contact");
 
     }
     public function about(){
