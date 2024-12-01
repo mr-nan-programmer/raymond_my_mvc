@@ -1,10 +1,6 @@
-@extends('layout.master')
+@extends('layout.en_master')
 @section("title","register")
 
-@section('specialLink')
-    <link rel="stylesheet" href="https://yiwuraymondcom.com/public/assets/css/form.css">
-
-@endsection
 @section('content')
     <div class="align">
 
