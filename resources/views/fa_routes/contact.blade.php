@@ -44,16 +44,16 @@
                 </p>
             </div>
         </div>
-        <a class="row" style="; justify-content: space-evenly;"  >
+        <div class="row" style="; justify-content: space-evenly;"  >
 
 
-            <a href="fa/contact/comments" class="col-md-6 col-lg-3 pb-5" >
-                <div class="h-100 py-5 services-icon-wap shadow">
+            <div class="col-md-6 col-lg-3 pb-5" >
+                <a href="fa/contact/comments" class="h-100 py-5 services-icon-wap shadow">
                     <div class="h1 text-success text-center"><i class="fa-solid fa-comments"></i></div>
                     <h2 class="h5 mt-4 text-center">نظردهی</h2>
-                </div>
-            </a>
-
+                </a>
+            </div>
+        
             <div class="col-md-6 col-lg-3 pb-5">
                 <div class="h-100 py-5 services-icon-wap shadow">
                     <div class="h1 text-success text-center"><i class="fa-solid fa-cart-flatbed"></i></div>
