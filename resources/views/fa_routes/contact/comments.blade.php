@@ -1,7 +1,6 @@
-@extends("layout.master")
+@extends("layout.fa_master")
 @section("title", "نظرات | Raymond")
 @section("content")
-<div class="background-red" >
     <div class="form-in-contact">
         <div class="line-color"></div>
         <div class="header-contact"><h2>نظرت راجعب رایموند چیه؟!</h2></div>
@@ -27,4 +26,4 @@
 
         </form>
     </div>
-</div>
+@endsection

@@ -15,9 +15,7 @@ Custom Css
     text-align: right !important;
 }
 .background-red{
-    position:absolute;
-    width: 100%;
-    min-height: 100%;
+
     background:linear-gradient(#212934 , #cd3939);
 }
 .image-contacts{
