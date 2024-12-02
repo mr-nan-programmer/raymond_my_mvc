@@ -45,9 +45,9 @@
             </div>
         </div>
         <div class="row" style="; justify-content: space-evenly;"  >
-            <a href="fa/contact/comments">
+            <a href="fa/contact/comments" style="width: fit-content;">
 
-            <div class="col-md-6 col-lg-3 pb-5" >
+            <div class="col-md-6 col-lg-3 pb-5" style="width: 13rem" >
                 <div class="h-100 py-5 services-icon-wap shadow">
                     <div class="h1 text-success text-center"><i class="fa-solid fa-comments"></i></div>
                     <h2 class="h5 mt-4 text-center">نظردهی</h2>
