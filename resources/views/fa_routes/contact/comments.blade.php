@@ -4,7 +4,7 @@
     <div class="form-in-contact">
         <div class="line-color"></div>
         <div class="header-contact"><h2>نظرت راجعب رایموند چیه؟!</h2></div>
-        <img src="assets/img/green-boc-contact.png" class="image-contacts">
+        <img src="https://yiwuraymondcom.com/public/assets/img/green-boc-contact.png" class="image-contacts">
         <div class="lable-intrested"><p>اگر نظرات و پیشنهادات شما باعث بهبود عملکرد رایموند شود حتما آنها را اعمال میکنیم</p></div>
         <form class="form-contact" method="post" action="">
             <i class="fa-solid fa-at"></i>
@@ -26,4 +26,5 @@
 
         </form>
     </div>
+    <br>
 @endsection
