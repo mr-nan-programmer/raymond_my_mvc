@@ -45,7 +45,7 @@
             </div>
         </div>
         <div class="row" style="; justify-content: space-evenly;"  >
-            <a href="fa/contact/comments" style="width: fit-content;">
+            <a href="contact/comments" style="width: fit-content;">
 
             <div class="col-md-6 col-lg-3 pb-5" style="width: 13rem" >
                 <div class="h-100 py-5 services-icon-wap shadow">
