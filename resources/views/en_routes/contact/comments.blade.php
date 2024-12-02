@@ -1,5 +1,4 @@
-
-@extends("layout.en_mastermaster")
+@extends("layout.en_master")
 @section("title", "意见 | Raymond")
 @section("content")
     <div class="form-in-contact">
