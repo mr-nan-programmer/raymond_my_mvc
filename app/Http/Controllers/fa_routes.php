@@ -23,4 +23,9 @@ class fa_routes extends Controller
         echo  $this->render("fa_routes.products");
 
     }
+    public function  contact_comments()
+    {
+        echo $this->render("fa_routes.contact.comments");
+
+    }
 }

@@ -23,4 +23,9 @@ class en_routes extends Controller
         echo  $this->render("en_routes.products");
 
     }
+    public function  contact_comments()
+    {
+        echo $this->render("en_routes.contact.comments");
+
+    }
 }
