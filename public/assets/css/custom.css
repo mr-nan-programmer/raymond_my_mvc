@@ -18,6 +18,15 @@ Custom Css
 
     background:linear-gradient(#212934 , #cd3939);
 }
+.a-contact-menu{
+    width: fit-content;
+}
+.contact-menu-align{
+    justify-content: space-evenly;
+}
+.contact-width{
+    width: 13rem !important;
+}
 .image-contacts{
     width: 100%;
 }
