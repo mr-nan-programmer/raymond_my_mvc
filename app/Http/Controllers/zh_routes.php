@@ -53,7 +53,7 @@ class zh_routes extends Controller
     }
     public function  contact_comments()
     {
-        echo $this->render("zh_routes.contact.comments");
+        echo $this->render("5page.contact.comments");
 
     }
 }

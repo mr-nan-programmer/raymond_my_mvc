@@ -40,4 +40,4 @@ Router::call_page("/en",[en_routes::class,"index"],[email_veifay::class,"backend
 Router::call_page("/en/about",[en_routes::class,"about"],[email_veifay::class,"backend"]);
 Router::call_page("/en/contact",[en_routes::class,"contact"],[en_routes::class,"backend"]);
 Router::call_page("/en/products",[en_routes::class,"products"],[en_routes::class,"backend"]);
-Router::call_page("/en/contact/comments",[fa_routes::class,"contact_comments"],[Admin_panel::class,"back"]);
+Router::call_page("/en/contact/comments",[en_routes::class,"contact_comments"],[Admin_panel::class,"back"]);
